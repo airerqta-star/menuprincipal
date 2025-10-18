@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal - Municipalidad de Reconquista</title>
+    <!-- Carga de Tailwind CSS para el styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carga de la fuente manuscrita "Caveat" para el fondo animado -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-turquesa: #1abc9c;
+            --color-turquesa-oscuro: #16a085;
+            --color-turquesa-claro: #48c9b0;
+            --color-primario: #00447C; /* Azul institucional para el fondo */
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #f0f8ff; /* Fondo general azul suave */
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Previene scroll horizontal */
+        }
+
+        /* --- Estilos para la Animación de Fondo --- */
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 5; /* Asegura que esté justo detrás del contenido principal */
+            pointer-events: none; /* Ignora clics */
+            overflow: hidden;
+            font-family: 'Caveat', cursive; /* Fuente manuscrita para el fondo */
+        }
+
+        .floating-word {
+            position: absolute;
+            color: var(--color-primario);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            white-space: nowrap;
+            opacity: 0.15; /* Lo mantenemos algo transparente para que no compita con el texto del menú */
+            animation: floatAndSway linear infinite;
+            font-weight: 700;
+        }
+
+        /* Keyframes para la animación de flotar y balancear */
+        @keyframes floatAndSway {
+            0% {
+                transform: translateY(100vh) translateX(0px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.15; /* Aparece con opacidad */
+            }
+            50% {
+                transform: translateY(20vh) translateX(50px) rotate(10deg);
+            }
+            95% {
+                opacity: 0.15;
+            }
+            100% {
+                transform: translateY(-20vh) translateX(-50px) rotate(-10deg);
+                opacity: 0; /* Desaparece */
+            }
+        }
+        /* --- Fin Estilos para la Animación de Fondo --- */
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        turquesa: 'var(--color-turquesa)',
+                        'turquesa-dark': 'var(--color-turquesa-oscuro)',
+                        'turquesa-light': 'var(--color-turquesa-claro)',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Contenedor para la animación de fondo -->
+    <div id="background-animation-container" class="background-animation">
+        <!-- Las palabras se insertarán aquí por JavaScript -->
+    </div>
+    
+    <!-- Contenido principal con un z-index más alto para estar encima de la animación -->
+    <div class="relative z-10"> 
+        <header class="bg-turquesa shadow-lg">
+            <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+                <h1 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+                    MUNICIPALIDAD DE RECONQUISTA
+                </h1>
+                <img src="https://raw.githubusercontent.com/airerqta-star/notificados/e3e563f4ba3f0d277fafdc7fd2580ac48963451e/Sec-Control-Publico.png" alt="Logo Secretaría de Control Público" class="h-12 w-auto">
+            </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-semibold mb-8 text-gray-700 text-center">Notificaciones por casos graves de Inmuebles con Maleza y Faltos de Higiene</h2>
+
+            <!-- Grid de Tarjetas -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Tarjeta ID: 001 (Más reciente) -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                    <a href="https://airerqta-star.github.io/limpiatubaldio_hoy/" class="block">
+                        <img class="w-full h-48 object-cover" 
+                             src="https://raw.githubusercontent.com/airerqta-star/notificados/40db842f0c758f0757dbe99a02df1835c2511a3b/miniahumada2.jpg" 
+                             alt="Vista previa de notificación para Ahumada Jorge" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x400/d1e5ff/4682b4?text=ERROR';">
+                    </a>
+                    <div class="p-6 relative">
+                        <h3 class="text-xl font-bold mb-2 text-turquesa-dark">Notificación: AHUMADA JORGE</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Infracción detectada en Calle Rivadavia N° 58.
+                        </p>
+                        <a href="https://airerqta-star.github.io/limpiatubaldio_hoy/" class="inline-block px-4 py-2 text-sm font-medium text-white bg-turquesa rounded-lg hover:bg-turquesa-dark transition duration-150 shadow-md">
+                            Ver Notificación
+                        </a>
+                        <span class="absolute bottom-2 right-3 text-xs text-gray-400 font-mono">ID: 001</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta ID: 002 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                    <a href="https://airerqta-star.github.io/limpiatubaldio/" class="block">
+                        <img class="w-full h-48 object-cover" 
+                             src="https://raw.githubusercontent.com/airerqta-star/notificados/40db842f0c758f0757dbe99a02df1835c2511a3b/miniaturamarovio.jpg" 
+                             alt="Vista previa de notificación para Oliva Marovio" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x400/d1e5ff/4682b4?text=ERROR';">
+                    </a>
+                    <div class="p-6 relative">
+                        <h3 class="text-xl font-bold mb-2 text-turquesa-dark">Notificación: OLIVA MAROVIO</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                           Infracción detectada en San Lorenzo N°49.
+                        </p>
+                        <a href="https://airerqta-star.github.io/limpiatubaldio/" class="inline-block px-4 py-2 text-sm font-medium text-white bg-turquesa rounded-lg hover:bg-turquesa-dark transition duration-150 shadow-md">
+                            Ver Notificación
+                        </a>
+                        <span class="absolute bottom-2 right-3 text-xs text-gray-400 font-mono">ID: 002</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta ID: 003 (Ejemplo - puedes borrarla o modificarla) -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                    <a href="#" class="block">
+                        <img class="w-full h-48 object-cover" 
+                             src="https://placehold.co/600x400/1abc9c/ffffff?text=Próximamente" 
+                             alt="Próxima notificación" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x400/d1e5ff/4682b4?text=ERROR';">
+                    </a>
+                    <div class="p-6 relative">
+                        <h3 class="text-xl font-bold mb-2 text-turquesa-dark">Próxima Notificación</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Este espacio está reservado para futuras publicaciones de notificaciones.
+                        </p>
+                        <a href="#" class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-400 rounded-lg cursor-not-allowed shadow-md">
+                            Ver Notificación
+                        </a>
+                        <span class="absolute bottom-2 right-3 text-xs text-gray-400 font-mono">ID: 003</span>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+
+        <footer class="mt-12 py-4 text-center text-sm text-gray-500 border-t">
+            &copy; 2024 Municipalidad de Reconquista - Secretaría de Control Público
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const words = ["limpiá", "tú", "terreno", "obligación"];
+            const bgContainer = document.getElementById('background-animation-container');
+            const numElements = 60; // Cantidad de palabras flotantes
+
+            for (let i = 0; i < numElements; i++) {
+                const wordElement = document.createElement('span');
+                
+                // Selecciona una palabra aleatoria
+                wordElement.textContent = words[Math.floor(Math.random() * words.length)];
+                wordElement.classList.add('floating-word');
+
+                // Valores aleatorios para la animación y el estilo
+                const startX = Math.random() * 100; // Posición horizontal (0-100vw)
+                const startSize = Math.random() * (40 - 20) + 20; // Tamaño de fuente aleatorio (20px a 40px)
+                const duration = Math.random() * (20 - 10) + 10; // Duración de la animación (10s a 20s)
+                const delay = Math.random() * -duration; // Retraso negativo para que empiecen en diferentes puntos del ciclo
+
+                wordElement.style.left = `${startX}vw`;
+                wordElement.style.fontSize = `${startSize}px`;
+                wordElement.style.animationDuration = `${duration}s`;
+                wordElement.style.animationDelay = `${delay}s`;
+                
+                bgContainer.appendChild(wordElement);
+            }
+        });
+    </script>
+</body>
+</html>
+
