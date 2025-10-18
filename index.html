@@ -7,7 +7,7 @@
 
     <!-- Metadatos para compartir en Redes Sociales (Open Graph & Twitter Cards) -->
     <meta property="og:title" content="Notificaciones - Municipalidad de Reconquista" />
-    <meta property="og:description" content="La Secretaría de Control Público notifica a propietarios de inmuebles, baldíos o edificados para que procedan a su limpieza. Tú terreno, tú obligación." />
+    <meta property="og:description" content="La Secretaría de Control Público notifica a propietarios de inmuebles, baldíos o edificados que los mantengan en adecuadas condiciones de higiene." />
     <meta property="og:image" content="https://raw.githubusercontent.com/airerqta-star/notificados/a3595d95a83e77bde801f9d11442dcf611820e77/miniahumada2.jpg" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image">
@@ -54,10 +54,10 @@
 
         .floating-word {
             position: absolute;
-            color: var(--color-primario);
+            color: var(--color-turquesa); /* Color turquesa para las palabras */
             text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
             white-space: nowrap;
-            opacity: 0.15; /* Lo mantenemos algo transparente para que no compita con el texto del menú */
+            opacity: 0.8; /* Lo mantenemos algo transparente para que no compita con el texto del menú */
             animation: floatAndSway linear infinite;
             font-weight: 700;
         }
@@ -69,13 +69,11 @@
                 opacity: 0;
             }
             10% {
-                opacity: 0.15; /* Aparece con opacidad */
+                opacity: 0.8; /* Aparece con opacidad */
             }
             50% {
                 transform: translateY(20vh) translateX(50px) rotate(10deg);
-            }
-            95% {
-                opacity: 0.15;
+                opacity: 0.8;
             }
             100% {
                 transform: translateY(-20vh) translateX(-50px) rotate(-10deg);
@@ -123,77 +121,77 @@
             <!-- Grid de Tarjetas -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- Tarjeta ID: 001 (Más reciente) -->
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
-                    <a href="https://airerqta-star.github.io/limpiatubaldio_hoy/" class="block">
+                <!-- Tarjeta ID: 003 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.03] transition duration-300 relative">
+                    <a href="https://airerqta-star.github.io/limpiatuinmueble3/" target="_blank" class="block">
                         <img class="w-full h-48 object-cover" 
-                             src="https://raw.githubusercontent.com/airerqta-star/notificados/40db842f0c758f0757dbe99a02df1835c2511a3b/miniahumada2.jpg" 
-                             alt="Vista previa de notificación para Ahumada Jorge" 
+                             src="https://raw.githubusercontent.com/airerqta-star/limpiatuinmueble3/f5188c4a4d23441c8096674ca8f395fd502060ca/PLANTILLAMINIATURA2.jpg"
+                             alt="Vista previa de notificación para FANTO ALEJANDRA" 
                              onerror="this.onerror=null; this.src='https://placehold.co/600x400/d1e5ff/4682b4?text=ERROR';">
                     </a>
-                    <div class="p-6 relative">
-                        <h3 class="text-xl font-bold mb-2 text-turquesa-dark">Notificación: AHUMADA JORGE</h3>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-turquesa-dark">Notificado: FANTO ALEJANDRA y/o Q.R.J.R.</h3>
                         <p class="text-gray-600 text-sm mb-4">
-                            Infracción detectada en Calle Rivadavia N° 58.
+                            Infracción detectada en Calle Alvear N° 1375.
                         </p>
-                        <a href="https://airerqta-star.github.io/limpiatubaldio_hoy/" class="inline-block px-4 py-2 text-sm font-medium text-white bg-turquesa rounded-lg hover:bg-turquesa-dark transition duration-150 shadow-md">
+                        <a href="https://airerqta-star.github.io/limpiatuinmueble3/" target="_blank" class="inline-block px-4 py-2 text-sm font-medium text-white bg-turquesa rounded-lg hover:bg-turquesa-dark transition duration-150 shadow-md">
                             Ver Notificación
                         </a>
-                        <span class="absolute bottom-2 right-3 text-xs text-gray-400 font-mono">ID: 001</span>
                     </div>
+                    <span class="absolute bottom-2 right-3 text-xs font-bold text-gray-400 bg-gray-100 px-2 py-1 rounded">ID: 003</span>
                 </div>
 
                 <!-- Tarjeta ID: 002 -->
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
-                    <a href="https://airerqta-star.github.io/limpiatubaldio/" class="block">
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.03] transition duration-300 relative">
+                    <a href="https://airerqta-star.github.io/limpiatubaldio_hoy/" target="_blank" class="block">
+                         <img class="w-full h-48 object-cover" 
+                             src="https://raw.githubusercontent.com/airerqta-star/notificados/40db842f0c758f0757dbe99a02df1835c2511a3b/miniahumada2.jpg" 
+                             alt="Vista previa de notificación para Ahumada" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x400/d1e5ff/4682b4?text=ERROR';">
+                    </a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-turquesa-dark">Notificado: AHUMADA y/o Q.R.J.R.</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                           Infracción detectada en Calle Rivadavia N° 58.
+                        </p>
+                        <a href="https://airerqta-star.github.io/limpiatubaldio_hoy/" target="_blank" class="inline-block px-4 py-2 text-sm font-medium text-white bg-turquesa rounded-lg hover:bg-turquesa-dark transition duration-150 shadow-md">
+                            Ver Notificación
+                        </a>
+                    </div>
+                     <span class="absolute bottom-2 right-3 text-xs font-bold text-gray-400 bg-gray-100 px-2 py-1 rounded">ID: 002</span>
+                </div>
+
+                <!-- Tarjeta ID: 001 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.03] transition duration-300 relative">
+                    <a href="https://airerqta-star.github.io/limpiatubaldio/" target="_blank" class="block">
                         <img class="w-full h-48 object-cover" 
-                             src="https://raw.githubusercontent.com/airerqta-star/notificados/40db842f0c758f0757dbe99a02df1835c2511a3b/miniaturamarovio.jpg" 
+                             src="https://raw.githubusercontent.com/airerqta-star/notificados/40db842f0c758f0757dbe99a02df1835c2511a3b/miniaturamarovio.jpg"
                              alt="Vista previa de notificación para Oliva Marovio" 
                              onerror="this.onerror=null; this.src='https://placehold.co/600x400/d1e5ff/4682b4?text=ERROR';">
                     </a>
-                    <div class="p-6 relative">
-                        <h3 class="text-xl font-bold mb-2 text-turquesa-dark">Notificación: OLIVA MAROVIO</h3>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-turquesa-dark">Notificado: OLIVA MAROVIO y/o Q.R.J.R.</h3>
                         <p class="text-gray-600 text-sm mb-4">
-                           Infracción detectada en San Lorenzo N°49.
+                            Infracción detectada en Calle San Lorenzo N° 49.
                         </p>
-                        <a href="https://airerqta-star.github.io/limpiatubaldio/" class="inline-block px-4 py-2 text-sm font-medium text-white bg-turquesa rounded-lg hover:bg-turquesa-dark transition duration-150 shadow-md">
+                        <a href="https://airerqta-star.github.io/limpiatubaldio/" target="_blank" class="inline-block px-4 py-2 text-sm font-medium text-white bg-turquesa rounded-lg hover:bg-turquesa-dark transition duration-150 shadow-md">
                             Ver Notificación
                         </a>
-                        <span class="absolute bottom-2 right-3 text-xs text-gray-400 font-mono">ID: 002</span>
                     </div>
-                </div>
-
-                <!-- Tarjeta ID: 003 (Ejemplo - puedes borrarla o modificarla) -->
-                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
-                    <a href="#" class="block">
-                        <img class="w-full h-48 object-cover" 
-                             src="https://placehold.co/600x400/1abc9c/ffffff?text=Próximamente" 
-                             alt="Próxima notificación" 
-                             onerror="this.onerror=null; this.src='https://placehold.co/600x400/d1e5ff/4682b4?text=ERROR';">
-                    </a>
-                    <div class="p-6 relative">
-                        <h3 class="text-xl font-bold mb-2 text-turquesa-dark">Próxima Notificación</h3>
-                        <p class="text-gray-600 text-sm mb-4">
-                            Este espacio está reservado para futuras publicaciones de notificaciones.
-                        </p>
-                        <a href="#" class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-400 rounded-lg cursor-not-allowed shadow-md">
-                            Ver Notificación
-                        </a>
-                        <span class="absolute bottom-2 right-3 text-xs text-gray-400 font-mono">ID: 003</span>
-                    </div>
+                     <span class="absolute bottom-2 right-3 text-xs font-bold text-gray-400 bg-gray-100 px-2 py-1 rounded">ID: 001</span>
                 </div>
                 
             </div>
         </main>
 
         <footer class="mt-12 py-4 text-center text-sm text-gray-500 border-t">
-            &copy; 2024 Municipalidad de Reconquista - Secretaría de Control Público
+            Gestión de Notificaciones - Municipalidad de Reconquista
         </footer>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const words = ["limpiá", "tú", "terreno", "obligación"];
+            const words = ["limpiá", "tu", "terreno", "obligación"];
             const bgContainer = document.getElementById('background-animation-container');
             const numElements = 60; // Cantidad de palabras flotantes
 
@@ -221,6 +219,9 @@
     </script>
 </body>
 </html>
+
+
+
 
 
 
